@@ -1,0 +1,801 @@
+@font-face {
+    font-family: "Moon-walk";
+    src: url("../assets/moon-walk.ttf");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Poppins;
+    background-color: #000720;
+    user-select: none;
+    height: 100vh;
+  }
+  
+  .sticky-go-up-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+  }
+  
+  .sticky-go-up-btn i {
+    font-size: 35px;
+    color: #fff;
+    border-radius: 7px;
+    margin: 1rem;
+    padding: 8px;
+    height: 3.3rem;
+    background-color: #1a1635;
+    cursor: pointer;
+  }
+  
+  .navbar-wrapper {
+    z-index: 1000;
+    align-self: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 7.5rem;
+  }
+  
+  .navbar-container {
+    backdrop-filter: blur(12px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  .navigations {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navigations a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .navigations a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #000720;
+    border-radius: 10px;
+  }
+  
+  .register-button button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hamburger menu */
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    margin: 1rem 0;
+    color: #000;
+    text-align: left;
+    margin-left: 2rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: none;
+    background-color: none;
+    width: fit-content;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #000720;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .contents-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-wrapper {
+      padding: 2.5rem 3.5rem;
+    }
+    .navigations {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+    }
+  
+    .navbar-container {
+      justify-content: space-between;
+    }
+  
+    .register-button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .dropdown-menu.show {
+      display: block;
+      max-height: 20rem;
+    }
+  }
+  
+  .zairza-logo img {
+    height: 30px;
+  }
+  
+  .zairza-logo {
+    cursor: pointer;
+  }
+  
+  .register-button button {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
+    width: 7rem;
+    height: 2.3rem;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .register-button button:hover {
+    opacity: 0.6;
+  }
+  
+  #skills-description {
+    margin: 0rem 0rem;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    gap: 6rem;
+  }
+  
+  .desc-para {
+    margin-top: 100px;
+    width: 32rem;
+  }
+  
+  #home-begins {
+    height: 10rem;
+  }
+  
+  .shape1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .shape2 {
+    position: absolute;
+    top: 15%;
+    right: 22%;
+  }
+  
+  .shape1 img {
+    height: 160px;
+    width: 250px;
+  }
+  
+  .register-link {
+    margin: 3px 0 24px 0;
+  }
+  
+  .register-link a {
+    font-size: 800;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+  
+    animation-name: text-register;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  
+  @keyframes text-register {
+    from {
+    }
+  
+    to {
+      color: rgba(240, 248, 255, 0.361);
+    }
+  }
+  
+  .explore-domains-btn button {
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 4px 7px;
+    cursor: pointer;
+  }
+  
+  .explore-domains-btn a {
+    text-decoration: none;
+  }
+  
+  .explore-domains-btn button:hover {
+    background-color: #9a8dec;
+    color: #fff;
+  }
+  
+  .explore-domains-btn img {
+    height: 25px;
+  }
+  
+  .by-zairza {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  .by-zairza img {
+    height: 30px;
+  }
+  
+  .shape3 {
+    height: 200px;
+    position: relative;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: -100;
+  }
+  
+  #process-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6.5rem;
+  }
+  
+  .skills-short-desc {
+    color: #9a8dec;
+    font-size: 35px;
+  
+    animation-name: text-what-is-skills;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  
+  @keyframes text-what-is-skills {
+    from {
+    }
+  
+    to {
+      color: #998dec36;
+    }
+  }
+  
+  .steps {
+    width: 94%;
+  }
+  
+  .steps li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: #9a8dec;
+    font-size: 17px;
+    gap: 0.7rem;
+    word-spacing: 2px;
+    margin: 1rem 0;
+  }
+  
+  .steps img {
+    height: 35px;
+  }
+  
+  .steps span {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .steps li b {
+    color: #fff;
+  }
+  
+  #timeline-wrapper {
+    padding-top: 10rem;
+  }
+  
+  .timeline-conents {
+    background-color: #9a8dec;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  .event-shedule {
+    color: #000720;
+    font-size: 32px;
+    font-weight: 600;
+  
+    animation-name: text-event-schedule;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  
+  @keyframes text-event-schedule {
+    from {
+    }
+  
+    to {
+      color: #000720a1;
+    }
+  }
+  
+  .weeks {
+    color: #1a1635;
+    font-weight: 600;
+  }
+  
+  .desc-head {
+    color: #9a8dec;
+    font-size: 35px;
+  }
+  
+  .skills-head {
+    font-family: Moon-walk;
+    font-size: 60px;
+  }
+  
+  .short-desc {
+    font-size: 25px;
+  }
+  
+  .desc-para .desc {
+    font-weight: 400;
+    font-size: 17px;
+    word-spacing: 1px;
+    line-height: 30px;
+  }
+  
+  .process-img img {
+    height: 450px;
+  }
+  
+  .process-moon-text {
+    font-family: Moon-walk;
+    font-size: 60px;
+    color: #fff;
+  }
+  
+  .timeline-moon {
+    font-family: Moon-walk;
+    font-size: 65px;
+  }
+  
+  /* BADGES AND PERKS  */
+  
+  #perks-wrapper {
+    background-color: #000720;
+    padding-top: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7.5rem 6.5rem;
+  }
+  .bnc-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 590px;
+  }
+  
+  .bnc-short-desc {
+    color: #9a8dec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 36px;
+    animation-name: text-what-is-skills;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  
+  .bnc-para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+    opacity: 0.7;
+  }
+  .perks-moon {
+    display: flex;
+    justify-content: center;
+    font-family: Moon-walk;
+    color: white;
+    font-size: 65px;
+    line-height: 65px;
+  }
+  
+  .badges-img {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .badges-img img {
+    max-height: 340px;
+  }
+  .badge1 {
+    max-height: 310px !important;
+    margin-top: 2.3rem;
+  }
+  
+  
+  /* EXPLORE DOMAINS PAGE  */
+  
+  #explore-domains-wrapper{
+      background-color: #000720;
+      padding-top: 10rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 7.5rem 5.5rem;
+      color: white;
+  }
+  .explore-domains-short-desc{
+      color: #9a8dec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-size: 36px;
+    animation-name: text-what-is-skills;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  .explore-domains-moon{
+      display: flex;
+    justify-content: center;
+    font-family: Moon-walk;
+    color: white;
+    font-size: 65px;
+    line-height: 65px;
+  }
+  
+  
+  .explore-domains-container{
+      width : 100% ;
+      background-color: #362d6d;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;  
+      border-radius: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    
+    .explore-domains-container select{
+      background-color: #362d6d;
+      color: #ffffffaf;
+      font-size: 16px;
+      padding: 6px;
+      border: 1px solid #ffffffb4;
+      border-radius: 8px;
+    }
+    
+    
+    
+    .container-head {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 1rem;
+    }
+    
+    .explore-container-body{
+      padding-bottom: 4rem;
+      background-color: #1a1635;
+      gap: 0rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      border-radius: 0 0 1.5rem 1.5rem;
+  }
+  
+  .domain-text{
+    opacity: 0.7;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  
+  
+  .explore-container-body .domain{
+      height: 205px;
+      width: 177.5px;
+      display: flex;
+      /* justify-content: center; */
+      padding: 2rem 0 2rem 0;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;   
+  
+  }
+  .explore-container-body .domain img:hover{
+      opacity: 0.8;
+  
+  }
+  
+  
+  
+  .footer-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #9A8DEC;
+    flex-wrap: wrap;
+    padding: 1.8rem 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .footer-wrapper a{
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .footer-wrapper .footer-skills{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+    width: 47%;
+    color: #fff;
+    font-weight: 500;
+  }
+  .footer-wrapper .footer-skills .footer-desc-ending{
+    opacity:0.6;
+    margin-bottom: 2rem ;
+  }
+  
+  .footer-wrapper img{
+    height: 45px;
+  }
+  
+  .footer-links{
+    display: flex;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    #skills-description {
+      flex-direction: column;
+      padding: 20px;
+      justify-content: center;
+    }
+  
+    .skills-description-person img {
+      height: 27rem;
+    }
+  
+    .desc-para {
+      margin-top: -110px;
+      width: 100%;
+    }
+  
+    .desc-head {
+      font-size: 25px;
+    }
+  
+    .skills-head {
+      font-size: 50px;
+    }
+  
+    .short-desc {
+      font-size: 23px;
+    }
+  
+    .desc-para desc {
+      font-size: 15px;
+    }
+  
+    .shape2 {
+      right: 60%;
+    }
+  
+    .shape1 {
+      height: 10px;
+      width: 250px;
+    }
+  
+    #process-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+      padding: 0 1.5rem;
+    }
+  
+    .shape3 {
+      top: -150px;
+    }
+  
+    .process-img img {
+      height: 350px;
+    }
+  
+    .skills-short-desc {
+      font-size: 25px;
+    }
+  
+    .steps li {
+      font-size: 15px;
+    }
+  
+    .process-moon-text {
+      font-size: 55px;
+    }
+  
+    .process-left-text {
+      padding: 20px;
+    }
+  
+    .event-shedule {
+      font-size: 22px;
+    }
+  
+    .timeline-moon {
+      font-size: 60px;
+    }
+  
+    .weeks div {
+      font-size: 15px;
+    }
+    #perks-wrapper {
+      padding: 7.5rem 2rem;
+    }
+  
+    .bnc-text-content {
+      width: 100%;
+    }
+  
+    .bnc-short-desc {
+      font-size: 24px;
+    }
+    .perks-moon {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    .bnc-para {
+      font-size: 16px;
+    }
+  
+    .badges-img img{
+      height: 280px;
+    }
+    .explore-domains-short-desc{
+      font-size: 27px;
+      text-align: center;
+    }
+    .explore-domains-moon{
+      font-size: 55px;
+    }
+  
+    .footer-wrapper .footer-skills{
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+  }
+  }
+  
+  @media (max-width: 668px){
+    .explore-container-body .domain{
+      width : 127.7px ;
+    }
+    #explore-domains-wrapper{
+      padding: 7.5rem 1.5rem;
+    }
+    .skills-description-person{
+      width : 75vw ;
+    }
+  }
+  @media ( max-width : 452px ){
+    img{
+      max-height : 80vw ;
+    /* DO NOT CHANGE THIS , IT's CRUICIAL  */
+    }
+    .navbar-wrapper{
+      padding : 2rem 1rem; 
+    }
+    #explore-domains-wrapper{
+      padding: 7.5rem 1rem;
+    }
+    .badges-img img {
+      height : 170px ; 
+    }
+     .footer-skills{
+      width : 90% ; 
+     }
+    .footer-desc-ending{
+      width : 86vw ;
+    }
+  
+  }
+  
+  
+  
