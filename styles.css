@@ -746,7 +746,7 @@
     }
   
     .badges-img img{
-      height: 280px;
+      height: 300px;
     }
     .explore-domains-short-desc{
       font-size: 27px;
@@ -777,7 +777,8 @@
   @media ( max-width : 452px ){
     img{
       max-height : 80vw ;
-    /* DO NOT CHANGE THIS , IT's CRUICIAL  */
+    /* MOHAN: DO NOT CHANGE THIS , IT's CRUICIAL  */
+    /* SURYA: Okay */
     }
     .navbar-wrapper{
       padding : 2rem 1rem; 
