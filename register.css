@@ -325,22 +325,30 @@ body {
     outline: none;
 }
 
-.sprint-head{
+.sprint-head {
     margin-left: 1.3rem;
 }
 
-.at-max{
+.at-max {
     margin-left: 1.3rem;
 }
-.create-folder{
+
+.create-folder {
     margin-left: 1.3rem;
 }
 
 @media (max-width : 800px) {
-    .login{
+    .join-sprint{
+        font-size: 25px;
+    }
+    .sprint-moon{
+        font-size: 55px;
+    }
+    .login {
         text-align: center;
         justify-content: center;
     }
+
     .register-wrapper {
         flex-direction: column-reverse;
         padding: 0;
@@ -365,7 +373,7 @@ body {
     }
 
     .join-sprint {
-        line-height: 1;
+        line-height: 0.8;
         width: 100%;
         text-align: center;
     }
@@ -376,9 +384,24 @@ body {
         align-items: center;
         flex-direction: column;
     }
+
     .back-create-navs {
         display: flex;
         justify-content: space-between;
+    }
+
+    .textarea{
+        display: flex;
+        gap: 1rem
+    }
+    .name{
+        margin: 0 0rem;
+    }
+    .sprint-input-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -463,16 +486,7 @@ body {
         width: fit-content;
     }
 
-    .textarea {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .textarea-small-right,
-    .textarea-small-left {
-        width: 100%;
-        margin: 0.5rem 0rem;
-    }
+    
 
 }
 
