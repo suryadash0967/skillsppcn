@@ -800,7 +800,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   .shape3 {
@@ -824,7 +824,7 @@ body {
   }
 
   .process-left-text {
-    padding: 20px;
+    padding: 10px;
   }
 
   .event-shedule {

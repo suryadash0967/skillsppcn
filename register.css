@@ -363,11 +363,11 @@ body {
     }
 
     .at-max {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .create-folder {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .join-sprint {
@@ -393,7 +393,7 @@ body {
     }
 
     .sprint-left {
-        width: 80%;
+        width: 95%;
         padding: 0;
     }
     .login{
