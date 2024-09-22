@@ -1,38 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Moon-walk:wght@400&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/skills.png" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKILLS++</title>
 </head>
+
 <body>
-    <div class="container" >
-        
-        
-        <div class="login-form">
-            <h1>Welcome Back!!</h1> 
-            <h2 style="font-family: Moon-walk;">LOG IN</h2>
-            <div class="register-link">
-            <p>Haven't registered yet? <a href="#" style="color: #9A8DEC;">Register</a></p>
+
+
+    <div class="navbar-wrapper">
+        <div class="navbar-container">
+            <div class="contents-nav">
+                <div class="zairza-logo">
+                    <a href="https://skillspp-green.vercel.app/#home-begins">
+                        <img src="./assets/skills.png" alt="Skills Logo" />
+                    </a>
+                </div>
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="navigations">
+                    <a href="https://skillspp-green.vercel.app/#process-wrapper">Process</a>
+                    <a href="https://skillspp-green.vercel.app/#timeline-wrapper">Timeline</a>
+                    <a href="https://skillspp-green.vercel.app/#perks-wrapper">Perks</a>
+                    <a href="https://skillspp-green.vercel.app/#explore-domains-wrapper">Explore Domains</a>
+                    <a href="https://skillspp-green.vercel.app/#faqs-wrapper">FAQs</a>
+                </div>
+                <div class="register-button">
+                    <a href="">
+                        <button>Register</button>
+                    </a>
+                </div>
             </div>
-            
-    
-            <form action="#" >
-                <input type="email" placeholder="Email" name="email" required >
-                <input type="password" placeholder="Password" name="password" required>
-                <div class="form-footer">
-                    <a href="#" class="forgot-password">Forgot Password?</a>
-                    <button type="submit" class="login-btn">Log In</button>
+            <div class="dropdown-menu">
+                <a href="https://skillspp-green.vercel.app/#process-wrapper" onclick="closeMenu()">Process</a>
+                <a href="https://skillspp-green.vercel.app/#timeline-wrapper" onclick="closeMenu()">Timeline</a>
+                <a href="https://skillspp-green.vercel.app/#perks-wrapper" onclick="closeMenu()">Perks</a>
+                <a href="https://skillspp-green.vercel.app/#explore-domains-wrapper" onclick="closeMenu()">Explore
+                    Domains</a>
+                <a href="https://skillspp-green.vercel.app/#faqs-wrapper" onclick="closeMenu()">FAQs</a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="login-form">
+            <div class="login-head" style="font-weight: 500; color: #9A8DEC;">Welcome Back!!</div>
+            <div class="login-moon" style="font-family: Moon-walk;">LOG IN</div>
+            <div class="register-link">
+                <p style="color: #afafaf;">Haven't registered yet? <a
+                        href="https://skillspp-green.vercel.app/register.html" style="color: #9A8DEC;">Register</a></p>
+            </div>
+
+
+            <form action="#">
+                <div class="textarea">
+                    <div class="textarea-small-left">
+                        <input type="text" placeholder="E - mail">
+                    </div>
+                    <div class="textarea-small-right">
+                        <input type="password" placeholder="password">
+                    </div>
                 </div>
             </form>
-            
+            <div class="forgot-pass" style="text-align: end; margin: 1.3rem 0;">
+                <a href="#" style="width: 100%; color: rgb(154, 141, 236);">Forgot Password ?</a>
+            </div>
+            <div class="back-create-navs">
+                <button style="font-family: Poppins; background-color: #000720; border: 1px solid #fff"><a
+                        style="color: #fff; text-decoration: none;" href="https://skillspp-green.vercel.app"><i
+                            class='bx bx-left-arrow-alt'></i>Back</a></button>
+                <button style="font-family: Poppins; color: #202020;">Log In<i
+                        class='bx bx-right-arrow-alt'></i></button>
+            </div>
+
         </div>
         <div class="illustration">
-            <img src="signinlogo.cf949914e21b85c2108b.png" alt="Illustration"> <!-- Replace with your image -->
+            <img src="assets/login.png" alt="Illustration">
         </div>
-        
-        
+
+
     </div>
+
+    <div class="footer-wrapper">
+        <div class="footer-skills">
+            <div class="footer-skills-logo">
+                <img src="data:image/png;base64,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"
+                    alt="">
+            </div>
+            <div class="footer-desc-ending">
+                A event organised by Zairza for the welfare of budding talented software engineers, hardware engineers
+                and
+                designers
+            </div>
+        </div>
+        <div class="footer-links">
+            <a target="_blank" href="https://www.youtube.com/@zairzarobosofdescluboutrb1825">Youtube</a>
+            <a target="_blank" href="https://www.instagram.com/zairza.outr/">Instagram</a>
+            <a target="_blank" href="https://in.linkedin.com/company/zairza">LinkedIn</a>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleMenu() {
+            const dropdown = document.querySelector(".dropdown-menu");
+            dropdown.classList.toggle("show");
+        }
+
+        function closeMenu() {
+            const dropdown = document.querySelector(".dropdown-menu");
+            dropdown.classList.remove("show");
+        }
+    </script>
 </body>
+
 </html>
