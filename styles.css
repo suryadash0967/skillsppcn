@@ -213,13 +213,15 @@ body {
 
 .shape1 {
   position: absolute;
+  z-index: -1000;
   top: 0;
   right: 0;
 }
 
 .shape2 {
   position: absolute;
-  top: 15%;
+  z-index: -1000;
+  top: 90px;
   right: 22%;
 }
 
