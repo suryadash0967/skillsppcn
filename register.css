@@ -230,6 +230,7 @@ body {
 
 .input {
     width: 100%;
+    margin-left: 1.3rem;
 }
 
 .input input,
@@ -324,7 +325,22 @@ body {
     outline: none;
 }
 
+.sprint-head{
+    margin-left: 1.3rem;
+}
+
+.at-max{
+    margin-left: 1.3rem;
+}
+.create-folder{
+    margin-left: 1.3rem;
+}
+
 @media (max-width : 800px) {
+    .login{
+        text-align: center;
+        justify-content: center;
+    }
     .register-wrapper {
         flex-direction: column-reverse;
         padding: 0;
@@ -345,11 +361,11 @@ body {
     }
 
     .register-wrapper img {
-        height: 400px;
+        height: 350px;
     }
 
     .join-sprint {
-        line-height: 0.9;
+        line-height: 1;
         width: 100%;
         text-align: center;
     }
