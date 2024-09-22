@@ -660,9 +660,9 @@ body {
   padding-top: 7.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  gap: 4rem;
+  /* gap: 4rem; */
 }
 
 .faq-item{
@@ -696,7 +696,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 7px;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem;
 }
 
 .faq-answer {
@@ -736,6 +736,7 @@ body {
 
 .faqs-head{
   font-size: 65px;
+  margin-bottom: 4rem;
 }
 
 
