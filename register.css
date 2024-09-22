@@ -65,6 +65,9 @@ body {
 }
 
 .navigations a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     font-size: 18px;
     text-decoration: none;
@@ -392,6 +395,9 @@ body {
     .sprint-left {
         width: 80%;
         padding: 0;
+    }
+    .login{
+        margin: 0;
     }
 
     .sprint-right {
