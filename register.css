@@ -412,7 +412,7 @@ body {
     }
 
     .join-sprint {
-        line-height: 1;
+        line-height: normal;
         width: 100%;
         text-align: center;
     }
