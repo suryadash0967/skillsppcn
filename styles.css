@@ -906,6 +906,12 @@ body {
     font-size: 14px;
     padding: 20px;
   }
+  .visit-zairza{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 668px) {
